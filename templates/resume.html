@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+
+  <section class="py-5 text-center container">
+    <div class="row py-lg-5">
+      <div class="col-lg-6 col-md-8 mx-auto">
+        <h2 class="fw-light">Download my resume here</h2>
+          <a href="{{url_for('download')}}" class="btn btn-outline-dark my-2">Download pdf</a>
+      </div>
+    </div>
+  </section>
+
+<div class="img text-center my-5">
+    <img src="static/cv.jpg" height="1000" alt="resume">
+</div>
+
+{% endblock %}

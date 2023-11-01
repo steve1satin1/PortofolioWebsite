@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold text-body-emphasis">You are already a subscriber 🤯</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">I know how much you want to see every new project i upload but subscribing twice won't make a difference</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <a type="button" class="btn btn-outline-secondary btn-lg px-4 me-sm-3" href="{{url_for('home')}}">Home</a>
+      </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <iframe src="https://giphy.com/embed/jUvbhe62rcK2X6mwHn" width="480" height="269" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/walter--rupauls-drag-race-all-stars-jUvbhe62rcK2X6mwHn">via GIPHY</a></p>
+      </div>
+    </div>
+  </div>
+{% endblock %}

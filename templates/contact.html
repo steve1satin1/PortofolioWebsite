@@ -1,0 +1,30 @@
+{% extends "base.html" %}
+{% from 'bootstrap5/form.html' import render_form %}
+
+{% block content %}
+<div class="container col-xl-10 col-xxl-8 px-4 py-5">
+    {% with messages = get_flashed_messages() %}
+      {% if messages %}
+          {% for message in messages %}
+              <div class="alert alert-success" role="alert">
+                {{ message }}
+              </div>
+          {% endfor %}
+      {% endif %}
+    {% endwith %}
+    <div class="row align-items-center g-lg-5 py-5">
+      <div class="col-lg-7 text-center text-lg-start">
+        <h1 class="display-4 fw-bold lh-1 text-body-emphasis mb-3">Get in touch with me</h1>
+        <p class="col-lg-10 fs-4">Feel free to ask me anything by filling the form at the right. After you are done click the send button and i will respond as soon as possible 📩.</p>
+      </div>
+      <div class="col-md-10 mx-auto col-lg-5">
+        {{render_form(form, extra_classes='p-4 p-md-5 border rounder-3 bg-body-tertiary', button_style='outline-dark')}}
+        {{ ckeditor.load() }}
+        {{ ckeditor.config(name='message') }}
+      </div>
+    </div>
+  </div>
+<!--{{render_form(form, extra_classes='col-md-5 mx-auto my-5')}}-->
+<!--{{ ckeditor.load() }}-->
+<!--{{ ckeditor.config(name='body') }}-->
+{% endblock %}

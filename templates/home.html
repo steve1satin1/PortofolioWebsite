@@ -1,0 +1,51 @@
+{% extends "base.html" %}
+
+{% block content %}
+    {% with messages = get_flashed_messages() %}
+          {% if messages %}
+              {% for message in messages %}
+                  <div class="alert alert-success" role="alert">
+                    {{ message }}
+                  </div>
+              {% endfor %}
+          {% endif %}
+    {% endwith %}
+    <div id="face" class="container col-xxl-8 px-4 py-5">
+    <div class="row flex-lg-row-reverse align-items-center g-5 py-5">
+      <div class="col-10 col-sm-8 col-lg-6">
+        <img src="static/stergios2.jpg" class="d-block mx-lg-auto img-fluid" alt="Bootstrap Themes" width="700" height="500" loading="lazy">
+      </div>
+      <div class="col-lg-6">
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Hi,</h1>
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">I'm Stergios</h1>
+        <h1 class="display-5 fw-bold text-body-emphasis lh-1 mb-3">Papadopoulos</h1>
+
+        <p class="lead">I love python and that's why all the projects that i have made so far are written using it. I'm from Greece, a beautiful country that you should definitely visit. You can find more details about me in the Resume section</p>
+        <div class="d-grid gap-2 d-md-flex justify-content-md-start">
+          <a type="button" class="btn btn-secondary btn-lg px-4 me-md-2" href="{{url_for('resume')}}">Resume</a>
+          <a type="button" class="btn btn-outline-secondary btn-lg px-4" href="{{url_for('contact')}}">Contact Me</a>
+        </div>
+      </div>
+    </div>
+  </div>
+<main>
+
+
+  <div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold text-body-emphasis">Check out my projects</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">Most of the projects that i've made are created using python because that's the language i've learning so far, although at the time you visited my website i might have uploaded projects that use other language or maybe you visited my website by the time i have just uploaded it and that's why i only have one project 😎.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <a type="button" class="btn btn-outline-secondary btn-lg px-4 me-sm-3" href="{{url_for('projects')}}">Projects</a>
+      </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <img src="https://media.gcflearnfree.org/content/5e31ca08bc7eff08e4063776_01_29_2020/ProgrammingIllustration.png" class="img-fluid border rounded-3 shadow-lg mb-4" alt="Example image" width="700" height="500" loading="lazy">
+      </div>
+    </div>
+  </div>
+
+
+</main>
+{% endblock %}

@@ -1,0 +1,18 @@
+{% extends "base.html" %}
+
+{% block content %}
+<div class="px-4 pt-5 my-5 text-center border-bottom">
+    <h1 class="display-4 fw-bold text-body-emphasis">Thank you for the subscription 🥳</h1>
+    <div class="col-lg-6 mx-auto">
+      <p class="lead mb-4">From now on you will be the first to get informed when i upload a new project.</p>
+      <div class="d-grid gap-2 d-sm-flex justify-content-sm-center mb-5">
+        <a type="button" class="btn btn-outline-secondary btn-lg px-4 me-sm-3" href="{{url_for('home')}}">Home</a>
+      </div>
+    </div>
+    <div class="overflow-hidden" style="max-height: 30vh;">
+      <div class="container px-5">
+        <iframe src="https://giphy.com/embed/ZfK4cXKJTTay1Ava29" width="480" height="400" frameBorder="0" class="giphy-embed" allowFullScreen></iframe><p><a href="https://giphy.com/gifs/theoffice-ZfK4cXKJTTay1Ava29">via GIPHY</a></p>
+      </div>
+    </div>
+  </div>
+{% endblock %}
