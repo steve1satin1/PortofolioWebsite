@@ -112,7 +112,7 @@ def add():
         print(subscribers)
         with smtplib.SMTP("smtp.gmail.com", timeout=2000) as connection:
             connection.starttls()
-            connection.login(user="testyt559@gmail.com", password="mnlyytgzufbffgfz")
+            connection.login(user="testyt559@gmail.com", password=os.environ.get("email_pass"))
             for sub in subscribers:
                 connection.sendmail(from_addr="testyt559@gmail.com",
                                     to_addrs=f"{sub.email_sub}",
@@ -188,7 +188,7 @@ def contact():
 
         with smtplib.SMTP("smtp.gmail.com", timeout=2000) as connection:
             connection.starttls()
-            connection.login(user="testyt559@gmail.com", password="mnlyytgzufbffgfz")
+            connection.login(user="testyt559@gmail.com", password=os.environ.get("email_pass"))
             connection.sendmail(from_addr="testyt559@gmail.com",
                                 to_addrs="stevepd33333@gmail.com",
                                 msg=f"Subject:Msg From portfolio\n\nName: {name}\nEmail: {email}\nPhone: {phone}\nMes: {mes}")
