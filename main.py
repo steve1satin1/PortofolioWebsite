@@ -55,7 +55,7 @@ class Projects(db.Model):
 
 class Users(db.Model, UserMixin):
     id = mapped_column(Integer, primary_key=True)
-    password = mapped_column("password", String(50), nullable=False)
+    password = mapped_column("password", String(200), nullable=False)
 
 
 class Subscribers(db.Model):
