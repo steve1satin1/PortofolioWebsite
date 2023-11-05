@@ -49,8 +49,8 @@ class Projects(db.Model):
     title = mapped_column("title", String(50), nullable=False)
     image_url = mapped_column("image_url", String(100), nullable=False)
     github_url = mapped_column("github_url", String(100), nullable=False)
-    small_des = mapped_column("small_des", String(100), nullable=False)
-    description = mapped_column("description", String(200), nullable=False)
+    small_des = mapped_column("small_des", Text(), nullable=False)
+    description = mapped_column("description", Text(), nullable=False)
 
 
 class Users(db.Model, UserMixin):
