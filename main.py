@@ -10,7 +10,7 @@ from forms import ProjectForm, ContactForm, LoginForm, SubscribersForm
 from flask_sqlalchemy import SQLAlchemy
 from sqlalchemy.orm import DeclarativeBase
 from sqlalchemy.orm import mapped_column
-from sqlalchemy import Integer, String
+from sqlalchemy import Integer, String, Text
 from flask_ckeditor import CKEditor
 from flask_login import LoginManager, UserMixin, login_user, login_required, logout_user
 
@@ -55,7 +55,7 @@ class Projects(db.Model):
 
 class Users(db.Model, UserMixin):
     id = mapped_column(Integer, primary_key=True)
-    password = mapped_column("password", String(200), nullable=False)
+    password = mapped_column("password", Text(), nullable=False)
 
 
 class Subscribers(db.Model):
