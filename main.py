@@ -111,7 +111,7 @@ def add():
         # inform subscribers about the new project
         subscribers = Subscribers.query.all()
         print(subscribers)
-        with smtplib.SMTP("smtp.gmail.com", timeout=2000) as connection:
+        with smtplib.SMTP("smtp.gmail.com", timeout=2000, port=587) as connection:
             connection.starttls()
             connection.login(user="testyt559@gmail.com", password=os.environ.get("email_pass"))
             for sub in subscribers:
@@ -187,7 +187,7 @@ def contact():
         phone = request.form["phone"]
         mes = request.form["message"]
 
-        with smtplib.SMTP("smtp.gmail.com", timeout=2000) as connection:
+        with smtplib.SMTP("smtp.gmail.com", timeout=2000, port=587) as connection:
             connection.starttls()
             connection.login(user="testyt559@gmail.com", password=os.environ.get("email_pass"))
             connection.sendmail(from_addr="testyt559@gmail.com",
